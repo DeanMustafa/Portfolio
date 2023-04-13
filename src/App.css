@@ -1,0 +1,142 @@
+:root {
+    --primary-color: #234E70;
+    --secondary-color: #FBF8BE;
+    --secondary-color-dark: #fff982;
+    --dark-color: #201E20;
+}
+
+* {
+    font-family: sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    list-style: none;
+    text-decoration: none;
+    flex-grow: 1;
+    flex-shrink: 1;
+}
+
+.app {
+    background-color: var(--primary-color);
+}
+
+a {
+    color: black;
+}
+
+
+/* ***** NAV PAGE STYLE ***** */
+.nav {
+    display: flex;
+    align-items: center;
+    padding: 1em 2em;
+    background-color: var(--secondary-color);
+    text-align: center;
+    transition: 1s;
+}
+
+.nav li:hover {
+    width: 15%;
+    transition: 1s;
+}
+
+.home-btn {
+    font-size: 1em;
+    border: 3px solid black;
+    border-radius: 0.5em;
+    padding: 0.5em;
+}
+
+
+/* ***** MAIN PAGE STYLES ***** */
+.main {
+    display: flex;
+    flex-direction: column;
+}
+
+.main .intro {
+    height: 50vh;
+    display: flex;
+    justify-content: space-between;
+}
+
+.intro h1 {
+    font-size: 5em;
+}
+
+.intro img {
+    width: 25em;
+    margin: 1em;
+    border-radius: 3em;
+    box-shadow: 0 8px 6px -6px black;
+}
+
+.main .sub-intro {
+    height: 50vh;
+    background-color: #114872;
+    text-align: center;
+    font-size: 2em;
+}
+
+.uniqueText{
+    color: red;
+}
+
+.main .skills {
+    height: 100vh;
+    display: grid;
+    grid-template-areas:
+        'html html css css'
+        'html html css css'
+        'js js react react'
+        'js js react react'
+    ;
+    flex-wrap: wrap;
+    gap: 2em;
+    text-align: center;
+    justify-content: center;
+}
+
+.html {
+    grid-area: html;
+    width: 31.5em;
+}
+
+.html span {
+
+    color: #E65100;
+}
+
+.css {
+    grid-area: css;
+    width: 31.5em;
+}
+
+.javascript {
+    grid-area: js;
+    width: 31.5em;
+}
+
+.react {
+    grid-area: react;
+    width: 31.5em;
+}
+
+.skills .stars {
+    font-size: 4em;
+    letter-spacing: -10px;
+    box-shadow: 0 3px 10px 2px black;
+}
+
+.skills img {
+    width: 10em;
+    box-shadow: 0 8px 6px 0.5px black;
+    border-radius: 2em;
+    margin-bottom: 1em;
+}
+
+.skills p {
+    margin-bottom: 0.7em;
+    font-size: 2em;
+    font-weight: 700;
+}
