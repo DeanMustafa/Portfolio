@@ -1,27 +1,24 @@
 :root {
-    --primary-color: #234E70;
-    --secondary-color: #FBF8BE;
-    --secondary-color-dark: #fff982;
-    --dark-color: #201E20;
+    --primary-color: #000000;
+    --secondary-color: #ffffff;
+
+    --dark-font: #000000;
+    --light-font: yellow;
 }
 
 * {
-    font-family: sans-serif;
+    font-family: Georgia, 'Times New Roman', Times, serif;
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     list-style: none;
     text-decoration: none;
-    flex-grow: 1;
-    flex-shrink: 1;
+    color: white;
 }
 
 .app {
-    background-color: var(--primary-color);
-}
-
-a {
-    color: black;
+    background: var(--primary-color);
+    padding: 0 10em;
 }
 
 
@@ -29,22 +26,28 @@ a {
 .nav {
     display: flex;
     align-items: center;
-    padding: 1em 2em;
-    background-color: var(--secondary-color);
+    padding: 1em 0;
     text-align: center;
-    transition: 1s;
 }
 
-.nav li:hover {
-    width: 15%;
+.nav li {
+    display: inline;
+    padding: 0 2em;
     transition: 1s;
+    font-weight: 900;
+    letter-spacing: 2px;
+    flex-grow: 1;
 }
 
-.home-btn {
-    font-size: 1em;
-    border: 3px solid black;
-    border-radius: 0.5em;
-    padding: 0.5em;
+.nav a:hover {
+    border-bottom: solid 2px var(--light-font);
+    padding-bottom: 2px;
+    color: var(--light-font);
+    transition: 0.2s;
+}
+
+.nav a:active {
+    color: rgba(255, 255, 0, 0.500);
 }
 
 
@@ -52,91 +55,191 @@ a {
 .main {
     display: flex;
     flex-direction: column;
+    margin-top: 5em;
 }
 
-.main .intro {
-    height: 50vh;
+.intro {
+    color: white;
+    height: 100vh;
+    display: grid;
+    grid-template-areas:
+        'text img'
+    ;
+    cursor: default;
+}
+
+.intro .context {
+    margin-top: 10em;
     display: flex;
-    justify-content: space-between;
+    flex-direction: column;
+    gap: 1em;
+}
+
+.intro span {
+    font-size: 0.8em;
+    letter-spacing: 1px;
 }
 
 .intro h1 {
-    font-size: 5em;
+    font-size: 3em;
+}
+
+.intro p {
+    font-size: 1.5em;
+    margin: 1em 0;
 }
 
 .intro img {
-    width: 25em;
+    width: 30em;
     margin: 1em;
     border-radius: 3em;
     box-shadow: 0 8px 6px -6px black;
 }
 
-.main .sub-intro {
-    height: 50vh;
-    background-color: #114872;
-    text-align: center;
-    font-size: 2em;
+.intro .btns {
+    margin-top: 2em;
 }
 
-.uniqueText{
-    color: red;
+.intro .btn {
+    align-items: center;
+    appearance: none;
+    border-radius: 2em;
+    box-sizing: border-box;
+    cursor: pointer;
+    height: 48px;
+    justify-content: center;
+    line-height: 1;
+    padding-left: 16px;
+    padding-right: 16px;
+    font-size: 18px;
+    font-weight: 900;
 }
 
+.intro .btn:hover {
+    opacity: 0.7;
+}
+
+.intro .btn:active {
+    opacity: 1;
+}
+
+.first {
+    color: var(--dark-font);
+    border: 0;
+    background: var(--light-font);
+}
+
+.second {
+    margin-left: 1em;
+    background: var(--dark-font);
+    border: 2px solid #fff;
+    color: #fff;
+}
+
+.uniqueText {
+    color: var(--light-font);
+}
+
+
+/* ***** SKILLS ***** */
 .main .skills {
-    height: 100vh;
+    height: 25vh;
     display: grid;
     grid-template-areas:
-        'html html css css'
-        'html html css css'
-        'js js react react'
-        'js js react react'
+        'html css js react'
     ;
-    flex-wrap: wrap;
-    gap: 2em;
     text-align: center;
-    justify-content: center;
+}
+
+.skills img {
+    width: 7em;
 }
 
 .html {
     grid-area: html;
-    width: 31.5em;
-}
-
-.html span {
-
-    color: #E65100;
 }
 
 .css {
     grid-area: css;
-    width: 31.5em;
 }
 
 .javascript {
     grid-area: js;
-    width: 31.5em;
 }
 
 .react {
     grid-area: react;
-    width: 31.5em;
 }
 
-.skills .stars {
-    font-size: 4em;
-    letter-spacing: -10px;
-    box-shadow: 0 3px 10px 2px black;
+.html p {
+    color: var(--light-font);
 }
 
-.skills img {
-    width: 10em;
-    box-shadow: 0 8px 6px 0.5px black;
-    border-radius: 2em;
-    margin-bottom: 1em;
+.css p {
+    color: var(--light-font);
 }
 
-.skills p {
-    margin-bottom: 0.7em;
-    font-size: 2em;
-    font-weight: 700;
+.javascript p {
+    color: var(--light-font);
+}
+
+.react p {
+    color: var(--light-font);
+}
+
+
+/* ***** LINKS ***** */
+.links {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    height: 25vh;
+}
+
+.links .cont {
+    height: 3em;
+    width: 7em;
+    color: var(--light-font);
+    font-weight: 800;
+    font-size: 1.1em;
+    border: 2px solid var(--light-font);
+    border-radius: 0.7em;
+    background: var(--primary-color);
+    cursor: pointer;
+}
+
+.links .cont:hover {
+    opacity: 0.7;
+}
+
+.links .cont:active {
+    opacity: 1;
+}
+
+
+/* ***** SOCIAL ***** */
+.social {
+    display: inline-flex;
+}
+
+.social img {
+    width: 5em;
+}
+
+.social li:nth-child(1) {
+    margin-right: 2em;
+}
+
+
+/* ***** ACCOUNTS ***** */
+.accounts {
+    display: inline-flex;
+}
+
+.accounts img {
+    width: 5em;
+}
+
+.accounts li:nth-child(2) {
+    margin-left: 2em;
 }

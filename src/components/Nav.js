@@ -4,11 +4,15 @@ import { GrHomeOption } from 'react-icons/gr'
 function Nav() {
     return (
         <div className='nav'>
-            <li><a href='about'><p>Projects</p></a></li>
-            <li><a href='skills'><p>Skills</p></a></li>
-            <li><a className='home-btn' href='home'><GrHomeOption /></a></li>
-            <li><a href='contact'><p>Contact</p></a></li>
-            <li><a href='contact'><p>Resume</p></a></li>
+            <div className='nav_1'>
+            <li><a href='about'>Projects</a></li>
+            <li><a href='skills'>Skills</a></li>
+            </div>
+            <li><a href='/'>DEAN</a></li>
+            <div className='nav_2'>
+            <li><a href='contact'>Contact</a></li>
+            <li><a href='contact'>Resume</a></li>
+            </div>
         </div>
     )
 }
