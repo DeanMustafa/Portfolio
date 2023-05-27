@@ -1,0 +1,509 @@
+:root {
+  --primary-color: #000000;
+  --secondary-color: #ffffff;
+
+  --dark-font: #000000;
+  --light-font: yellow;
+}
+
+/* *** Main Styles *** */
+.contact-skills {
+  position: relative;
+  margin: 0 auto;
+  align-items: center;
+  height: 100vh;
+  padding-top: 3rem;
+}
+
+/* *** Skills Styles *** */
+.title-skills {
+  padding: 1.5rem;
+  margin-bottom: 15rem;
+  font-size: 3em;
+  text-align: center;
+  border-top: 1px solid #333;
+  text-transform: uppercase;
+  letter-spacing: 5px;
+  text-shadow: 0 4px 1px #333, 0 5px 2px #333, 0 6px 3px #333, 0 7px 4px #333,
+    0 8px 5px #333;
+}
+
+.skills {
+  position: absolute;
+  top: 10rem;
+  margin-left: 0;
+  margin-right: 0;
+  left: 0;
+  right: 0;
+  perspective: 10000px;
+  display: grid;
+  grid-template-areas: "html";
+  text-align: center;
+  align-items: center;
+  transform-style: preserve-3d;
+  animation: rotate 10s linear infinite;
+}
+
+@keyframes rotate {
+  from {
+  }
+  to {
+    transform: rotateY(360deg);
+  }
+}
+
+.skills img {
+  width: 7em;
+}
+
+.html {
+  grid-area: html;
+  transform: rotateY(90deg) translateZ(250px);
+  -webkit-box-reflect: below 0px
+    linear-gradient(transparent, transparent, #0004);
+}
+
+.css {
+  grid-area: html;
+  transform: rotateY(180deg) translateZ(250px);
+  -webkit-box-reflect: below 0px
+    linear-gradient(transparent, transparent, #0004);
+}
+
+.javascript {
+  grid-area: html;
+  transform: rotateY(270deg) translateZ(250px);
+  -webkit-box-reflect: below 0px
+    linear-gradient(transparent, transparent, #0004);
+}
+
+.react {
+  grid-area: html;
+  transform: rotateY(360deg) translateZ(250px);
+  -webkit-box-reflect: below 0px
+    linear-gradient(transparent, transparent, #0004);
+}
+
+/* *** Contact Styles *** */
+.links {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 5rem;
+}
+
+.contact-me {
+  background: #000000;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  min-height: 50vh;
+  justify-content: center;
+  align-items: left;
+  margin-top: 5rem;
+  padding-left: 5rem;
+  margin-bottom: 5rem;
+  gap: 10px;
+}
+
+.contact-me label {
+  font-size: 20px;
+  font-family: sans-serif;
+}
+
+.contact-me .input {
+  width: 30%;
+  color: black;
+  padding: 10px;
+  font-size: 20px;
+  border-radius: 7px;
+  outline: none;
+  border: none;
+}
+
+.contact-me .submit {
+  width: 10%;
+  color: black;
+  padding: 10px;
+  font-size: 20px;
+  border-radius: 7px;
+  outline: none;
+  border: none;
+  margin-bottom: 5rem;
+  cursor: pointer;
+  text-transform: uppercase;
+}
+
+.contact-me .submit:active {
+  background: yellow;
+  color: red;
+}
+
+.contact-me input:focus {
+  outline: 2px solid yellow;
+  background: #333;
+  color: white;
+}
+
+.contact-me textarea {
+  width: 40%;
+  height: 150px;
+  color: #000000;
+  font-size: 15px;
+  padding: 10px;
+  border-radius: 5px;
+}
+
+.contact-me textarea:focus {
+  outline: 2px solid yellow;
+  background: #333;
+  color: white;
+}
+
+/* *** Icons Styles *** */
+.social {
+  display: inline-flex;
+}
+
+.social img {
+  width: 5em;
+}
+
+.social > * {
+  transition: all 0.2s ease;
+}
+
+.social > *:hover {
+  transform: scale(1.1);
+}
+
+/* *****  ScreenSize: 300  ***** */
+@media screen and (min-width: 300px) {
+  /* *** Main Styles *** */
+  .contact-skills {
+    padding-top: 0rem;
+  }
+
+  /* *** Skills Styles *** */
+  .title-skills {
+    padding: 1rem;
+    font-size: 2em;
+  }
+
+  .skills {
+    top: 7rem;
+    perspective: unset;
+  }
+
+  .skills img {
+    width: 4em;
+  }
+
+  .social img {
+    width: 3.5em;
+  }
+
+  .html {
+    transform: rotateY(90deg) translateZ(150px);
+  }
+
+  .css {
+    transform: rotateY(180deg) translateZ(150px);
+  }
+
+  .javascript {
+    transform: rotateY(270deg) translateZ(150px);
+  }
+
+  .react {
+    transform: rotateY(360deg) translateZ(150px);
+  }
+
+  /* *** Contact Styles *** */
+  .links {
+    padding: 0 1em;
+  }
+
+  .contact-me {
+    width: 100%;
+    min-height: 50vh;
+    margin-top: 3rem;
+    padding-left: 1rem;
+    margin-bottom: 1rem;
+    gap: 7px;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .contact-me label {
+    font-size: 20px;
+    font-family: sans-serif;
+  }
+
+  .contact-me .input {
+    width: 80%;
+    font-size: 15px;
+    border-radius: 5px;
+  }
+
+  .contact-me .submit {
+    width: 30%;
+    border-radius: 5px;
+  }
+
+  .contact-me textarea {
+    width: 80%;
+    height: 150px;
+  }
+}
+
+/* *****  ScreenSize: 500  ***** */
+@media screen and (min-width: 500px) {
+  /* *** Main Styles *** */
+  .contact-skills {
+    padding-top: 0rem;
+  }
+
+  /* *** Skills Styles *** */
+  .title-skills {
+    padding: 1rem;
+    font-size: 2em;
+  }
+
+  .skills {
+    top: 7rem;
+    perspective: unset;
+  }
+  .social img {
+    width: 4em;
+  }
+
+  .skills img {
+    width: 6em;
+  }
+
+  .html {
+    transform: rotateY(90deg) translateZ(200px);
+  }
+
+  .css {
+    transform: rotateY(180deg) translateZ(200px);
+  }
+
+  .javascript {
+    transform: rotateY(270deg) translateZ(200px);
+  }
+
+  .react {
+    transform: rotateY(360deg) translateZ(200px);
+  }
+
+  /* *** Contact Styles *** */
+  .links {
+    padding: 0 3em;
+  }
+
+  .contact-me {
+    width: 100%;
+    min-height: 50vh;
+    margin-top: 3rem;
+    padding-left: 1rem;
+    margin-bottom: 1rem;
+    gap: 7px;
+  }
+
+  .contact-me label {
+    font-size: 20px;
+    font-family: sans-serif;
+  }
+
+  .contact-me .input {
+    width: 40%;
+    font-size: 15px;
+    border-radius: 5px;
+  }
+
+  .contact-me .submit {
+    width: 25%;
+    border-radius: 5px;
+  }
+
+  .contact-me textarea {
+    width: 70%;
+    height: 150px;
+  }
+}
+
+/* *****  ScreenSize: 1200  ***** */
+@media screen and (min-width: 1200px) {
+  /* *** Main Styles *** */
+  .contact-skills {
+    position: relative;
+    margin: 0 auto;
+    align-items: center;
+    height: 100vh;
+    padding-top: 3rem;
+  }
+
+  /* *** Skills Styles *** */
+  .title-skills {
+    padding: 1.5rem;
+    margin-bottom: 15rem;
+    font-size: 3em;
+    text-align: center;
+    border-top: 1px solid #333;
+    text-transform: uppercase;
+    letter-spacing: 5px;
+    text-shadow: 0 4px 1px #333, 0 5px 2px #333, 0 6px 3px #333, 0 7px 4px #333,
+      0 8px 5px #333;
+  }
+
+  .skills {
+    position: absolute;
+    top: 10rem;
+    margin-left: 0;
+    margin-right: 0;
+    left: 0;
+    right: 0;
+    perspective: 10000px;
+    display: grid;
+    grid-template-areas: "html";
+    text-align: center;
+    align-items: center;
+    transform-style: preserve-3d;
+    animation: rotate 10s linear infinite;
+  }
+
+  @keyframes rotate {
+    from {
+    }
+    to {
+      transform: rotateY(360deg);
+    }
+  }
+
+  .skills img {
+    width: 7em;
+  }
+
+  .html {
+    grid-area: html;
+    transform: rotateY(90deg) translateZ(250px);
+    -webkit-box-reflect: below 0px
+      linear-gradient(transparent, transparent, #0004);
+  }
+
+  .css {
+    grid-area: html;
+    transform: rotateY(180deg) translateZ(250px);
+    -webkit-box-reflect: below 0px
+      linear-gradient(transparent, transparent, #0004);
+  }
+
+  .javascript {
+    grid-area: html;
+    transform: rotateY(270deg) translateZ(250px);
+    -webkit-box-reflect: below 0px
+      linear-gradient(transparent, transparent, #0004);
+  }
+
+  .react {
+    grid-area: html;
+    transform: rotateY(360deg) translateZ(250px);
+    -webkit-box-reflect: below 0px
+      linear-gradient(transparent, transparent, #0004);
+  }
+
+  /* *** Contact Styles *** */
+  .links {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 5rem;
+  }
+
+  .contact-me {
+    background: #000000;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    min-height: 50vh;
+    justify-content: center;
+    align-items: left;
+    margin-top: 5rem;
+    padding-left: 5rem;
+    margin-bottom: 5rem;
+    gap: 10px;
+  }
+
+  .contact-me label {
+    font-size: 20px;
+    font-family: sans-serif;
+  }
+
+  .contact-me .input {
+    width: 30%;
+    color: black;
+    padding: 10px;
+    font-size: 20px;
+    border-radius: 7px;
+    outline: none;
+    border: none;
+  }
+
+  .contact-me .submit {
+    width: 10%;
+    color: black;
+    padding: 10px;
+    font-size: 20px;
+    border-radius: 7px;
+    outline: none;
+    border: none;
+    margin-bottom: 5rem;
+    cursor: pointer;
+    text-transform: uppercase;
+  }
+
+  .contact-me .submit:active {
+    background: yellow;
+    color: red;
+  }
+
+  .contact-me input:focus {
+    outline: 2px solid yellow;
+    background: #333;
+    color: white;
+  }
+
+  .contact-me textarea {
+    width: 40%;
+    height: 150px;
+    color: #000000;
+    font-size: 15px;
+    padding: 10px;
+    border-radius: 5px;
+  }
+
+  .contact-me textarea:focus {
+    outline: 2px solid yellow;
+    background: #333;
+    color: white;
+  }
+
+  /* *** Icons Styles *** */
+  .social {
+    display: inline-flex;
+  }
+
+  .social img {
+    width: 5em;
+  }
+
+  .social > * {
+    transition: all 0.2s ease;
+  }
+
+  .social > *:hover {
+    transform: scale(1.1);
+  }
+}

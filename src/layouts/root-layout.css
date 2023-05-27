@@ -1,0 +1,187 @@
+.root-layout {
+  height: 100vh;
+  background-color: black;
+}
+
+/* *****  Bulb  ***** */
+.bulb {
+  position: relative;
+}
+
+.light {
+  position: absolute;
+  margin-left: auto;
+  margin-right: auto;
+  left: 0;
+  right: 0;
+  text-align: center;
+  opacity: 0.5;
+}
+
+/* *****  Buttons  ***** */
+.switch {
+  position: absolute;
+  top: 20rem;
+}
+
+.switch {
+  font-family: Arial, Helvetica, sans-serif;
+  cursor: pointer;
+  color: rgb(0, 0, 0);
+  font-size: 1.2em;
+  font-weight: 900;
+  padding: 15px;
+  border-radius: 12px;
+  background-color: #999898;
+  border: none;
+  box-shadow: 0px 6px 0px #696868b9;
+  text-align: center;
+  transition: all 0.2 ease;
+  opacity: 0.7;
+}
+
+.switch:active {
+  top: 20.3rem;
+  box-shadow: 0px 0px 0px #000000b9, 0px 10px 10px white;
+}
+
+.bulb .active {
+  color: white;
+  opacity: 1;
+  box-shadow: 0px 10px 10px white;
+}
+
+.light-logo-on {
+  left: 20rem;
+}
+
+.light-logo-off {
+  right: 20rem;
+}
+
+/* *****  Extra Space  ***** */
+.space {
+  min-height: 100vh;
+}
+
+/* *****  ScreenSize: 300  ***** */
+@media screen and (min-width: 300px) {
+  .switch {
+    font-size: 1em;
+    font-weight: 800;
+    padding: 10px;
+    border-radius: 7px;
+  }
+
+  .switch:active {
+    top: 20.2rem;
+  }
+
+  .light-logo-on {
+    left: 2rem;
+    z-index: 100;
+  }
+
+  .light-logo-off {
+    right: 2rem;
+    z-index: 100;
+  }
+
+  .space {
+    min-height: 100vh;
+  }
+}
+
+/* *****  ScreenSize: 500  ***** */
+@media screen and (min-width: 500px) {
+  .switch {
+    font-size: 1.5em;
+  }
+
+  .switch:active {
+    top: 20.2rem;
+  }
+
+  .light-logo-on {
+    left: 5rem;
+    z-index: 100;
+  }
+
+  .light-logo-off {
+    right: 5rem;
+    z-index: 100;
+  }
+
+  .space {
+    min-height: 100vh;
+  }
+}
+
+/* *****  ScreenSize: 1200  ***** */
+@media screen and (min-width: 1200px) {
+  .root-layout {
+    height: 100vh;
+    background-color: black;
+  }
+
+  /* *****  Bulb  ***** */
+  .bulb {
+    position: relative;
+  }
+
+  .light {
+    position: absolute;
+    margin-left: auto;
+    margin-right: auto;
+    left: 0;
+    right: 0;
+    text-align: center;
+    opacity: 0.5;
+  }
+
+  /* *****  Buttons  ***** */
+  .switch {
+    position: absolute;
+    top: 20rem;
+  }
+
+  .switch {
+    font-family: Arial, Helvetica, sans-serif;
+    cursor: pointer;
+    color: rgb(0, 0, 0);
+    font-size: 1.2em;
+    font-weight: 900;
+    padding: 15px;
+    border-radius: 12px;
+    background-color: #999898;
+    border: none;
+    box-shadow: 0px 6px 0px #696868b9;
+    text-align: center;
+    transition: all 0.2 ease;
+    opacity: 0.7;
+  }
+
+  .switch:active {
+    top: 20.3rem;
+    box-shadow: 0px 0px 0px #000000b9, 0px 10px 10px white;
+  }
+
+  .bulb .active {
+    color: white;
+    opacity: 1;
+    box-shadow: 0px 10px 10px white;
+  }
+
+  .light-logo-on {
+    left: 20rem;
+  }
+
+  .light-logo-off {
+    right: 20rem;
+  }
+
+  /* *****  Extra Space  ***** */
+  .space {
+    min-height: 100vh;
+  }
+}

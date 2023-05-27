@@ -1,21 +1,31 @@
-import React, { useContext } from 'react'
-import "./App.css"
-import Nav from './components/Nav';
-import Main from './components/Main';
+import {
+  createBrowserRouter,
+  Route,
+  createRoutesFromElements,
+  RouterProvider,
+} from "react-router-dom";
 
-export const Context = React.createContext();
+import "./App.css";
+//* *****  Pages  *****
+import Main from "./components/Main";
+import Contact from "./components/Contact";
+import Projects from "./components/Projects";
+
+//* *****  Layout  *****
+import RootLayout from "./layouts/RootLayout";
+
+const router = createBrowserRouter(
+  createRoutesFromElements(
+    <Route path="/" element={<RootLayout />}>
+      <Route path="main" element={<Main />} />
+      <Route path="projects" element={<Projects />} />
+      <Route path="contact" element={<Contact />} />
+    </Route>
+  )
+);
 
 function Portfolio() {
-
-
-  return (
-    <Context.Provider>
-      <div className='app'>
-        <Nav />
-        <Main />
-      </div>
-    </Context.Provider>
-  )
+  return <RouterProvider router={router} />;
 }
 
-export default Portfolio
+export default Portfolio;

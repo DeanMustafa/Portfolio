@@ -1,0 +1,79 @@
+:root {
+  --primary-color: #000000;
+  --secondary-color: #ffffff;
+
+  --dark-font: #000000;
+  --light-font: yellow;
+}
+
+.nav {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: 1em 0;
+  text-align: center;
+  background: #000000;
+  border-top: 1px solid #333;
+  border-bottom: 1px solid #333;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+.nav li {
+  display: inline;
+  padding: 0 2em;
+  transition: 1s;
+  font-weight: 900;
+  letter-spacing: 2px;
+  flex-grow: 1;
+  text-transform: uppercase;
+  font-size: 20px;
+}
+
+.nav a:hover {
+  border-bottom: solid 2px var(--light-font);
+  padding-bottom: 2px;
+  color: var(--light-font);
+  transition: 0.2s;
+}
+
+.nav .active {
+  color: yellow;
+  border-bottom: solid 2px yellow;
+}
+
+.logo {
+  font-size: 1.5em;
+  border-bottom: solid 2px white;
+  border-radius: 5px;
+}
+
+/* *****  ScreenSize: 300  ***** */
+@media screen and (min-width: 300px) {
+  .nav {
+    display: flex;
+    flex-direction: unset;
+  }
+  .nav li {
+    font-size: 18px;
+  }
+
+  .nav_2 {
+    display: none;
+  }
+}
+
+/* *****  ScreenSize: 500  ***** */
+@media screen and (min-width: 500px){
+  .nav li {
+    font-size: 20px;
+  }
+}
+
+/* *****  ScreenSize: 1200  ***** */
+@media screen and (min-width: 1200px){
+  .nav_2 {
+    display: unset;
+  }
+}
