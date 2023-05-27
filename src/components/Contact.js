@@ -18,21 +18,20 @@ function Contact() {
     e.preventDefault();
 
     emailjs
-      .sendForm
-      // "service_oljn48a",
-      // "template_yth79lb",
-      // form.current,
-      // "HUbS_osSYpV5rW042"
-      ()
+      .sendForm(
+        "service_oljn48a",
+        "template_yth79lb",
+        form.current,
+        "HUbS_osSYpV5rW042"
+      )
       .then(
         (result) => {
           console.log(result.text);
-          e.target.reset();
-          alert("Email sent Successfully!");
+          alert("Email sent Successfully!")
         },
         (error) => {
           console.log(error.text);
-          alert("There is an ERROR!");
+          alert("There is an ERROR!")
         }
       );
   };
@@ -58,26 +57,26 @@ function Contact() {
       <div className="links" id="contact">
         <li className="social">
           <a href="https://www.youtube.com/channel/UC7oTYwf-cd89kp49ME7U28Q">
-            <img src={YT} />
+            <img src={YT} alt="youtube-icon" />
           </a>
         </li>
         <li className="social">
           <a href="https://www.instagram.com/dean_mustafa_">
-            <img src={Insta} />
+            <img src={Insta} alt="instagram-icon" />
           </a>
         </li>
         <li className="social">
           <a href="https://www.linkedin.com/in/fakhriddin-mustafaev-855a46225/">
-            <img src={LinkedIn} />
+            <img src={LinkedIn} alt="linkedin-icon" />
           </a>
         </li>
         <li className="social">
           <a href="https://github.com/DeanMustafa">
-            <img className="LN" src={GitHUB} />
+            <img className="LN" src={GitHUB} alt="github-icon" />
           </a>
         </li>
       </div>
-      
+
       <form className="contact-me" ref={form} onSubmit={sendEmail}>
         <label>Name</label>
         <input
